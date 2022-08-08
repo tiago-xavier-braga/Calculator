@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+
+:root{
+    --background-button: #04405c;
+    --background-button-hover: #0c5679;
+    --background-color: #002333;
+
+}
+html{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(0deg, #002333 0%, #0c5679 100%);
+    height: 100vh;
+}
+
+.screen{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.display{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 25vh;
+    width: 100%;
+    background-color: var(--background-color);
+
+}
+.input-display{
+    height: 15vh;
+    width: 80%;
+    padding: 4%;
+    text-align: right;
+    font-size: 3rem;
+    background-color: transparent;
+    border: none;
+    color: #FFF;
+    outline: none;
+}
+.keyboard{
+    display: flex;
+    flex-direction: column;
+    height: 65vh;
+    width: 100%;
+}
+.line{
+    display: flex;
+    flex-direction: row;
+
+    width: 100%;
+}
+.action-button{
+    height: 13vh;
+    width: 25%;
+
+    background-color: transparent;
+    border: none;
+    font-size: large;
+    background-color: var(--background-button);
+    color: #FFF;
+}
+.action-button:hover{
+    background-color: var(--background-button-hover);
+}
+.double-button{
+    width: 50%;
+}
