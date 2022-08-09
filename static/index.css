@@ -64,6 +64,7 @@ html{
     font-size: large;
     background-color: var(--background-button);
     color: #FFF;
+    outline: none;
 }
 .action-button:hover{
     background-color: var(--background-button-hover);
