@@ -5,7 +5,6 @@ function renderDisplay(){
     for(let i = 0; i < dataNumber.length; i++){
         document.getElementById('display').value += dataNumber[i];
     }
-    console.log(dataNumber)
 }
 
 function getNumber(number){
@@ -34,4 +33,19 @@ function deleteNumber(deleteCharacter){
         renderDisplay();
     }
 
+}
+
+function result(){
+    let value = '';
+    let signOperation = '';
+    for(var j = 0; j < dataNumber.length - 1; j++){
+        if(typeof(dataNumber[j]) == 'number'){
+            value += dataNumber[j];
+        } else{
+            signOperation += dataNumber[j];
+            break;
+        }
+    }
+    console.log(signOperation)
+    console.log(value)
 }
