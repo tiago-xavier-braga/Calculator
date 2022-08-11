@@ -36,16 +36,23 @@ function deleteNumber(deleteCharacter){
 }
 
 function result(){
-    let value = '';
+    let valuePrincipal = '';
+    let valueSecondary = '';
     let signOperation = '';
-    for(var j = 0; j < dataNumber.length - 1; j++){
-        if(typeof(dataNumber[j]) == 'number'){
-            value += dataNumber[j];
-        } else{
-            signOperation += dataNumber[j];
-            break;
+    
+    for(let j = 0; j < dataNumber.length -1; j++){
+        
+        if(dataNumber[j] != '+' && dataNumber[j] != '-' && dataNumber[j] != '*' && dataNumber[j] != '**' && dataNumber[j] != '/'){
+            valuePrincipal += dataNumber[j];
+        } else {
+            j++;
+            if(dataNumber[j] != '+' && dataNumber[j] != '-' && dataNumber[j] != '*' && dataNumber[j] != '**' && dataNumber[j] != '/'){
+                valueSecondary += dataNumber[j];
+            }
         }
     }
-    console.log(signOperation)
-    console.log(value)
+    console.log("valor principal: "+valuePrincipal)
+    console.log('valor secundario: ' + valueSecondary)
+
+
 }
