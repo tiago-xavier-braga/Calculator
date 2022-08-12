@@ -35,24 +35,41 @@ function deleteNumber(deleteCharacter){
 
 }
 
+function mathAccount(numberX, signal, numberY ){
+    if (signal == '+'){ return parseInt(numberX) + parseInt(numberY) };
+    if (signal == '-'){ return parseInt(numberX) - parseInt(numberY) };
+    if (signal == '*'){ return parseInt(numberX) * parseInt(numberY) };
+    if (signal == '/'){ return parseInt(numberX) * parseInt(numberY) };
+    if (signal == '**'){ return parseInt(numberX) * parseInt(numberY) };
+}
+
 function result(){
     let valuePrincipal = '';
     let valueSecondary = '';
-    let signOperation = '';
+    let signalMath = '';
     
-    for(let j = 0; j < dataNumber.length -1; j++){
+    for(let j = 0; j <= dataNumber.length - 1; j++){
         
         if(dataNumber[j] != '+' && dataNumber[j] != '-' && dataNumber[j] != '*' && dataNumber[j] != '**' && dataNumber[j] != '/'){
             valuePrincipal += dataNumber[j];
+            console.log("valor principal: "+ valuePrincipal)
         } else {
-            j++;
-            if(dataNumber[j] != '+' && dataNumber[j] != '-' && dataNumber[j] != '*' && dataNumber[j] != '**' && dataNumber[j] != '/'){
-                valueSecondary += dataNumber[j];
+            signalMath = dataNumber[j];
+            for(let i = j; i < dataNumber.length - 1; i++){
+                var z = j + 1;
+                if(dataNumber[z] != '+' && dataNumber[z] != '-' && dataNumber[z] != '*' && dataNumber[z] != '**' && dataNumber[z] != '/'){
+                    valueSecondary += dataNumber[z];
+                    console.log('valor secundario: ' + valueSecondary)
+                } else {
+                    break;
+                }
+                j++;
             }
         }
     }
-    console.log("valor principal: "+valuePrincipal)
-    console.log('valor secundario: ' + valueSecondary)
-
-
+    if(valuePrincipal > 8 || valueSecondary > 8){
+        document.getElementById('display').value = 'ERR';
+    } else{
+        document.getElementById('display').value = mathAccount(valuePrincipal, signalMath, valueSecondary);
+    }
 }
