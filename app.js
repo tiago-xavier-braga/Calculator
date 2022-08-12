@@ -67,7 +67,7 @@ function result(){
             }
         }
     }
-    if(valuePrincipal < 8 || valueSecondary < 8){
+    if(valuePrincipal.length > 8 || valueSecondary.length > 8){
         document.getElementById('display').value = 'ERR';
     } else{
         document.getElementById('display').value = mathAccount(valuePrincipal, signalMath, valueSecondary);
