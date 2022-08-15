@@ -1,6 +1,7 @@
 # Calculator
 
 This is the project that I developed based on repository [App-Ideas](https://github.com/florinpop17/app-ideas). 
+![](/static/calculator.png)
 
 ### [Git Page](https://tiago-xavier-braga.github.io/Calculator/)
 **Tier:** 1-Beginner
